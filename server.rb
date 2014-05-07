@@ -14,9 +14,7 @@ DataMapper.auto_upgrade!
 class Server < Sinatra::Base
   
   post '/' do
-    title = params["title"]
-    url = params["url"]
-    Link.create(:url => url, :title => title)
+    Link.create(:url => params["url"], :title => params["title"])
     redirect to('/')
   end
 

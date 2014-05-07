@@ -9,7 +9,7 @@ Feature: Viewer visits the Home Page
 
   Scenario: Adding a bookmark
     Given I am on the home page
-    And I fill in "title" with "Makers Academy"
+    And I fill in "title" with "Makers Academy2"
     And I fill in "url" with "http://www.makersacademy.com"
     And I click "Add Bookmark"
-    Then I should see "Makers Academy" in a link
+    Then I should see "Makers Academy2" in a link
