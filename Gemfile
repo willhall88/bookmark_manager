@@ -11,4 +11,5 @@ group :development, :test do
   gem "shotgun"
   gem "cucumber"
   gem "capybara"
+  gem "database_cleaner"
 end
