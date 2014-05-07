@@ -12,7 +12,19 @@ DataMapper.auto_upgrade!
 
 
 class Server < Sinatra::Base
+  
+  post '/' do
+    title = params["title"]
+    url = params["url"]
+    Link.create(:url => url, :title => title)
+    redirect to('/')
+  end
+
+
   get '/' do
+    @links = Link.all
     erb :index
   end
+
+
 end
